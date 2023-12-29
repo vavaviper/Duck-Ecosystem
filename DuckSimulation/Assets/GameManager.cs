@@ -4,21 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] // this means the line after will show up on unitiy
     public GameObject grassTile;
-
-    [SerializeField] // this means the line after will show up on unitiy
     public GameObject pond1;
-
-    [SerializeField] // this means the line after will show up on unitiy
     public GameObject pond2;
-
-    [SerializeField] // this means the line after will show up on unitiy
     public GameObject pond3;
-
-    [SerializeField] // this means the line after will show up on unitiy
     public GameObject duck;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +34,21 @@ public class GameManager : MonoBehaviour
 
         GameObject pond4Spawn = Instantiate(pond3, new Vector3((float)86.8, (float)0.1, (float)840.6), Quaternion.identity);
         pond4Spawn.transform.localScale = new Vector3((float)30, (float)1, (float)30);
+
+
+        
+
+
     }
 
     // Update is called once per frame
     void Update()
-    {   
-        
+    {
+
+    }
+
+    public void SpawnDuck()
+    {
+        GameObject duckSpawn = Instantiate(duck, new Vector3(Random.Range(0, 900), 24f, Random.Range(0, 900)), Quaternion.Euler(new Vector3(0f, 0f, 0f)));
     }
 }
